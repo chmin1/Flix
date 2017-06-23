@@ -21,9 +21,11 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     var movies: [[String: Any]] = []
     
     var refreshControl: UIRefreshControl!
+    var alertController: UIAlertController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         HUD.flash(.success, delay: 1.0)
         activityIndicator.startAnimating()
         
@@ -32,6 +34,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         tableView.insertSubview(refreshControl, at: 0)
         
         tableView.dataSource = self
+        isConnected()
         fetchMovies()
         
     }
@@ -53,6 +56,9 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         let task = session.dataTask(with: request) { (data, response, error) in
             // This will run when the network request returns
             if let error = error {
+                //If isConnected is called, the action will direct here
+                self.present(self.alertController, animated: true)
+                
                 print(error.localizedDescription)
             } else if let data = data {
                 //grab a dictionary of JSON objects. in this case, movie objects.
@@ -115,6 +121,19 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
             //pass info from the indexed movie dictionary to the detail view controller dictionary
             detailVC.movie = movie
         }
+    }
+    
+    // function to check if connected to internet
+    func isConnected() {
+        self.alertController = UIAlertController(title: "Network Error", message: "Make sure you are connected to the internet", preferredStyle: .alert)
+        
+        //try to connect again
+        let connect = UIAlertAction(title: "Connect", style: .cancel) { (action) in
+            self.fetchMovies()
+        }
+        
+        // add action to alertController
+        alertController.addAction(connect)
     }
     
     override func didReceiveMemoryWarning() {
