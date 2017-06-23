@@ -19,6 +19,8 @@
 		F9FCB62C1EFB3CB5005EDAE5 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCB62B1EFB3CB5005EDAE5 /* NowPlayingViewController.swift */; };
 		F9FCB62E1EFC3C08005EDAE5 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCB62D1EFC3C08005EDAE5 /* MovieCell.swift */; };
 		F9FCB6341EFCDEF8005EDAE5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCB6331EFCDEF8005EDAE5 /* DetailViewController.swift */; };
+		F9FCB6361EFDD146005EDAE5 /* PosterCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCB6351EFDD146005EDAE5 /* PosterCellCollectionViewCell.swift */; };
+		F9FCB6381EFDD1DD005EDAE5 /* SuperheroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCB6371EFDD1DD005EDAE5 /* SuperheroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		F9FCB62B1EFB3CB5005EDAE5 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		F9FCB62D1EFC3C08005EDAE5 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		F9FCB6331EFCDEF8005EDAE5 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F9FCB6351EFDD146005EDAE5 /* PosterCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosterCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		F9FCB6371EFDD1DD005EDAE5 /* SuperheroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperheroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,7 @@
 			children = (
 				F9FCB62B1EFB3CB5005EDAE5 /* NowPlayingViewController.swift */,
 				F9FCB6331EFCDEF8005EDAE5 /* DetailViewController.swift */,
+				F9FCB6371EFDD1DD005EDAE5 /* SuperheroViewController.swift */,
 			);
 			name = VCs;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				F9FCB62D1EFC3C08005EDAE5 /* MovieCell.swift */,
+				F9FCB6351EFDD146005EDAE5 /* PosterCellCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -471,8 +477,10 @@
 			files = (
 				F9FCB62C1EFB3CB5005EDAE5 /* NowPlayingViewController.swift in Sources */,
 				F9FCB5FE1EFB289A005EDAE5 /* AppDelegate.swift in Sources */,
+				F9FCB6381EFDD1DD005EDAE5 /* SuperheroViewController.swift in Sources */,
 				F9FCB62E1EFC3C08005EDAE5 /* MovieCell.swift in Sources */,
 				F9FCB6341EFCDEF8005EDAE5 /* DetailViewController.swift in Sources */,
+				F9FCB6361EFDD146005EDAE5 /* PosterCellCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
