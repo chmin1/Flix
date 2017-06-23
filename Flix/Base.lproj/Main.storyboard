@@ -57,6 +57,7 @@
                                         <color key="backgroundColor" red="0.12128128619248379" green="0.21702138162235426" blue="0.50708387305699487" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="overviewLabel" destination="3yj-8c-sfe" id="yFz-Ei-zXG"/>
+                                            <outlet property="posterImageView" destination="DPa-Vd-Kpa" id="8E9-qs-5MH"/>
                                             <outlet property="titleLabel" destination="sHZ-0D-ONZ" id="4Lo-yt-oE4"/>
                                         </connections>
                                     </tableViewCell>

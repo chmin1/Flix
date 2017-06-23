@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class NowPlayingViewController: UIViewController, UITableViewDataSource {
 
@@ -60,9 +61,17 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         let title = movie["title"] as! String // grabs the movie title from dictionary
         let overview = movie["overview"] as! String // grabs the movie overview from dictionary
         
+        // Third will be the image. this requires multiple components: the poster path and the base URL:
+        let posterPathString = movie["poster_path"] as! String //grabs the posterpath needed for the URL of the image
+        let baseURLString = "https://image.tmdb.org/t/p/w500" //hardcoded the base URL of the image source
+        
+        // combine the two above for the URL source of the movie image
+        let posterURL = URL(string: baseURLString + posterPathString)!
+        
         //pass info from dictionaries to the components of custom cell
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
+        cell.posterImageView.af_setImage(withURL: posterURL)
         
         
         return cell
