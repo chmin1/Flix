@@ -10,7 +10,7 @@ import UIKit
 import AlamofireImage
 
 class NowPlayingViewController: UIViewController, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     //Global variable used to hold dictionary of moives
@@ -21,7 +21,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         
         tableView.dataSource = self
-
+        
         //Create Network Request: url, request, session & task
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=fe2f217e9c2c68b9ea9de1fe42905fb0")
         
@@ -40,7 +40,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
                 let movies = dataDictionary["results"] as! [[String: Any]]
                 self.movies = movies
                 self.tableView.reloadData()
-                }
+            }
         }
         task.resume()
         
@@ -76,13 +76,30 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
-
+    
+    //segue Movie information to the DetailViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // get selected cell
+        let cell = sender as! UITableViewCell
+        //Grab the index of the selected cell (if not nil)
+        if let indexPath = tableView.indexPath(for: cell) {
+            //grab the movie information from the cell at this index
+            let movie = movies[indexPath.row]
+            
+            // create segue controller
+            let detailVC = segue.destination as! DetailViewController
+            
+            //pass info from the indexed movie dictionary to the detail view controller dictionary
+            detailVC.movie = movie
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-   
-
+    
+    
+    
 }
