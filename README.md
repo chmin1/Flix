@@ -48,8 +48,8 @@ Biggest challenge was understanding the network request and the segues. Once I u
 
 ## Credits
 
-- AlamofireImage
-- PKHUD
+- [AlamofireImage](https://github.com/Alamofire/AlamofireImage)
+- [PKHUD](https://github.com/pkluz/PKHUD)
 
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
 
