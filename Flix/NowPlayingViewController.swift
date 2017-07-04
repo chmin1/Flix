@@ -23,10 +23,13 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     var refreshControl: UIRefreshControl!
     var alertController: UIAlertController!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 50
         
-        HUD.flash(.success, delay: 1.0)
+        HUD.flash(.progress, delay: 10)
         activityIndicator.startAnimating()
         
         refreshControl = UIRefreshControl() //used to refresh app
@@ -68,6 +71,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
                 self.movies = movies
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
+                HUD.flash(.success, delay: 1.0)
                 self.activityIndicator.stopAnimating()
             }
         }

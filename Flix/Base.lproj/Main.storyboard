@@ -6,6 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,10 +24,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="177" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mMo-3R-9Gv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="177" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mMo-3R-9Gv">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.12141495943069458" green="0.21477614343166351" blue="0.50597667694091797" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="178" id="WRx-xS-Qim" customClass="MovieCell" customModule="Flix" customModuleProvider="target">
@@ -34,25 +36,42 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="177.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DPa-Vd-Kpa">
-                                                    <rect key="frame" x="8" y="7" width="103" height="162"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DPa-Vd-Kpa">
+                                                    <rect key="frame" x="8" y="8" width="103" height="162"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="162" id="Zuc-Kb-BT7"/>
+                                                        <constraint firstAttribute="width" constant="103" id="l8F-zb-slx"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHZ-0D-ONZ">
-                                                    <rect key="frame" x="119" y="8" width="248" height="49"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHZ-0D-ONZ">
+                                                    <rect key="frame" x="119" y="8" width="248" height="24"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <color key="textColor" red="0.99489795918367352" green="0.98979591836734693" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="An Amazon princess comes to the world of Man to become the greatest of the female superheroes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yj-8c-sfe">
-                                                    <rect key="frame" x="119" y="65" width="248" height="104"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An Amazon princess comes to the world of Man to become the greatest of the female superheroes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yj-8c-sfe">
+                                                    <rect key="frame" x="119" y="40" width="248" height="50.5"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                                     <color key="textColor" red="0.99489795918367352" green="0.98979591836734693" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="sHZ-0D-ONZ" secondAttribute="trailing" constant="8" id="640-qy-lpH"/>
+                                                <constraint firstItem="sHZ-0D-ONZ" firstAttribute="top" secondItem="DPa-Vd-Kpa" secondAttribute="top" id="HfE-76-ibw"/>
+                                                <constraint firstItem="3yj-8c-sfe" firstAttribute="trailing" secondItem="czf-zg-ZQe" secondAttribute="trailingMargin" id="O2C-gY-H3a"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="3yj-8c-sfe" secondAttribute="bottom" constant="8" id="P6J-9w-7Tm"/>
+                                                <constraint firstItem="sHZ-0D-ONZ" firstAttribute="leading" secondItem="DPa-Vd-Kpa" secondAttribute="trailing" constant="8" id="QsR-wv-LVv"/>
+                                                <constraint firstItem="3yj-8c-sfe" firstAttribute="leading" secondItem="sHZ-0D-ONZ" secondAttribute="leading" id="h4J-Mf-4gW"/>
+                                                <constraint firstItem="DPa-Vd-Kpa" firstAttribute="leading" secondItem="czf-zg-ZQe" secondAttribute="leading" constant="8" id="hJS-vw-dQA"/>
+                                                <constraint firstItem="DPa-Vd-Kpa" firstAttribute="top" secondItem="czf-zg-ZQe" secondAttribute="top" constant="8" id="han-wF-zM6"/>
+                                                <constraint firstItem="3yj-8c-sfe" firstAttribute="top" secondItem="sHZ-0D-ONZ" secondAttribute="bottom" constant="8" id="kgp-Sj-fA8"/>
+                                                <constraint firstItem="3yj-8c-sfe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DPa-Vd-Kpa" secondAttribute="trailing" constant="8" id="meI-x2-VFE"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DPa-Vd-Kpa" secondAttribute="bottom" constant="8" id="vUo-hz-G64"/>
+                                                <constraint firstItem="3yj-8c-sfe" firstAttribute="leading" secondItem="DPa-Vd-Kpa" secondAttribute="trailing" constant="8" id="x2F-2m-4Q4"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.12128128619248379" green="0.21702138162235426" blue="0.50708387305699487" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
@@ -71,6 +90,12 @@
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="mMo-3R-9Gv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7nL-xK-Bwd"/>
+                            <constraint firstItem="mMo-3R-9Gv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YGz-q5-ijO"/>
+                            <constraint firstAttribute="trailing" secondItem="mMo-3R-9Gv" secondAttribute="trailing" id="xLA-jJ-nn8"/>
+                            <constraint firstAttribute="bottom" secondItem="mMo-3R-9Gv" secondAttribute="bottom" id="zby-BO-J0B"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Now Playing" id="tVo-I6-EAp"/>
                     <connections>
@@ -149,37 +174,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k7z-Fi-f7B">
-                                <rect key="frame" x="0.0" y="64" width="375" height="270"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k7z-Fi-f7B">
+                                <rect key="frame" x="0.0" y="64" width="375" height="222.5"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lED-mx-VIM">
-                                <rect key="frame" x="16" y="252" width="103" height="162"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lED-mx-VIM">
+                                <rect key="frame" x="16" y="205.5" width="103" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="T1D-NK-oga"/>
+                                    <constraint firstAttribute="height" constant="162" id="gdz-3M-l47"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uad-Yf-sYs">
-                                <rect key="frame" x="127" y="331" width="248" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uad-Yf-sYs">
+                                <rect key="frame" x="127" y="294.5" width="240" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="An Amazon princess comes to the world of Man to become the greatest of the female superheroes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chD-r8-bRJ">
-                                <rect key="frame" x="16" y="432" width="343" height="215"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An Amazon princess comes to the world of Man to become the greatest of the female superheroes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chD-r8-bRJ">
+                                <rect key="frame" x="24" y="375.5" width="343" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <color key="textColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2e-Uk-w6T">
-                                <rect key="frame" x="127" y="384" width="248" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2e-Uk-w6T">
+                                <rect key="frame" x="127" y="326.5" width="93.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" red="0.99489795920000001" green="0.98979591840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.12141495943069458" green="0.21477614343166351" blue="0.50597667694091797" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Uad-Yf-sYs" firstAttribute="top" secondItem="k7z-Fi-f7B" secondAttribute="bottom" constant="8" id="33i-Pl-DWH"/>
+                            <constraint firstItem="lED-mx-VIM" firstAttribute="centerY" secondItem="k7z-Fi-f7B" secondAttribute="bottom" id="98S-IU-cMd"/>
+                            <constraint firstItem="k7z-Fi-f7B" firstAttribute="leading" secondItem="eVp-ol-Pvv" secondAttribute="leading" id="CME-oL-k7d"/>
+                            <constraint firstAttribute="trailing" secondItem="k7z-Fi-f7B" secondAttribute="trailing" id="DeK-ye-Jbs"/>
+                            <constraint firstItem="chD-r8-bRJ" firstAttribute="leading" secondItem="eVp-ol-Pvv" secondAttribute="leadingMargin" constant="8" id="PNf-Vm-3nO"/>
+                            <constraint firstItem="T2e-Uk-w6T" firstAttribute="top" secondItem="Uad-Yf-sYs" secondAttribute="bottom" constant="8" id="U8y-V7-12k"/>
+                            <constraint firstItem="chD-r8-bRJ" firstAttribute="trailing" secondItem="eVp-ol-Pvv" secondAttribute="trailingMargin" constant="8" id="Wkc-wk-gqg"/>
+                            <constraint firstItem="lED-mx-VIM" firstAttribute="leading" secondItem="eVp-ol-Pvv" secondAttribute="leading" constant="16" id="fj2-fb-6RC"/>
+                            <constraint firstItem="chD-r8-bRJ" firstAttribute="top" secondItem="lED-mx-VIM" secondAttribute="bottom" constant="8" id="geT-XS-Imt"/>
+                            <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="chD-r8-bRJ" secondAttribute="bottom" constant="8" id="nH2-6X-UQe"/>
+                            <constraint firstItem="k7z-Fi-f7B" firstAttribute="leading" secondItem="eVp-ol-Pvv" secondAttribute="leading" id="rPO-NS-tKt"/>
+                            <constraint firstAttribute="trailing" secondItem="Uad-Yf-sYs" secondAttribute="trailing" constant="8" id="rlJ-C5-Xog"/>
+                            <constraint firstItem="k7z-Fi-f7B" firstAttribute="top" secondItem="vTt-aN-QmM" secondAttribute="bottom" id="vvR-xe-bb4"/>
+                            <constraint firstItem="Uad-Yf-sYs" firstAttribute="leading" secondItem="lED-mx-VIM" secondAttribute="trailing" constant="8" id="xXd-od-Hhr"/>
+                            <constraint firstItem="T2e-Uk-w6T" firstAttribute="leading" secondItem="lED-mx-VIM" secondAttribute="trailing" constant="8" id="xcE-Yv-rK9"/>
+                            <constraint firstItem="k7z-Fi-f7B" firstAttribute="height" secondItem="eVp-ol-Pvv" secondAttribute="height" multiplier="1:3" id="zYu-Hu-Ovp"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="backDropImageView" destination="k7z-Fi-f7B" id="3RN-Uo-8Id"/>
@@ -218,6 +260,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nWE-4m-AyQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="wrE-q2-EG2">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
