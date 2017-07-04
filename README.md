@@ -38,7 +38,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/wzbmGN2.gif title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/h1lHGhX.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -48,8 +48,8 @@ Biggest challenge was understanding the network request and the segues. Once I u
 
 ## Credits
 
-- AlamofireImage
-- PKHUD
+- [AlamofireImage](https://github.com/Alamofire/AlamofireImage)
+- [PKHUD](https://github.com/pkluz/PKHUD)
 
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
 
